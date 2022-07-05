@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attribution {
+  color: var(--light-grey);
+  position: fixed;
+  bottom: 2rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--orange);
+}

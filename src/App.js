@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from './components/Card';
+import Rating from './components/Rating';
+import Rated from './components/Rated';
+import style from './App.module.css';
+import { useState } from 'react';
 
 function App() {
+  const [rated, setRated] = useState(false);
+  const [selectedRating, setSelectedRating] = useState();
+
+  const ratedHandler = (isRated, number) => {
+    setRated(isRated);
+    setSelectedRating(number);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <main className={style.container}>
+      <Card>
+        {!rated ? (
+          <Rating onSubmit={ratedHandler} />
+        ) : (
+          <Rated rating={selectedRating} />
+        )}
+      </Card>
+      <div className={style.attribution}>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">
+          Frontend Mentor
         </a>
-      </header>
-    </div>
+        . Coded by <a href="https://github.com/ivcp">ivcp</a>.
+      </div>
+    </main>
   );
 }
 

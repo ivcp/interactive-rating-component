@@ -1,0 +1,12 @@
+.card {
+  width: 41.4rem;
+  padding: 3rem;
+  background-color: var(--rating-bg);
+  border-radius: 2.5rem;
+}
+
+@media (max-width: 23.4375em) {
+  .card {
+    width: 85%;
+  }
+}

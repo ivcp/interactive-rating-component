@@ -1,0 +1,28 @@
+.rated {
+  align-items: center;
+  text-align: center;
+}
+
+.image {
+  background: url('../../public/illustration-thank-you.svg') center no-repeat;
+  width: 50%;
+  height: 12rem;
+}
+
+@media (max-width: 23.4375em) {
+  .image {
+    width: 100%;
+    height: 14rem;
+  }
+}
+
+.selected {
+  color: var(--orange);
+  font-size: 1.5rem;
+  font-weight: 400;
+  background-color: var(--rating-bg-light);
+  border-radius: 10rem;
+  padding: 0.8rem 1rem;
+  width: max-content;
+  margin-bottom: 2rem;
+}
